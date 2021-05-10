@@ -64,13 +64,13 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename='/to-do-list'>
         <Header title='Logo'></Header>
         <Switch>
-          <Route exact path="/" render={() => {
+          <Route exact path='/' render={() => {
 
             return (
-              <div className="container">
+              <div className='container'>
                 <AddTodo addTodo={addTodo}></AddTodo>
                 <TodosList todos={todos} onDelete={onDelete}></TodosList>
               </div>
@@ -78,12 +78,12 @@ function App() {
 
           }}>
           </Route>
-          <Route path="/about">
+          <Route path='/about'>
             <About />
           </Route>
         </Switch>
 
-        <Footer title='My Footer'></Footer>
+        <Footer title='Footer'></Footer>
       </Router>
     </>
   );
