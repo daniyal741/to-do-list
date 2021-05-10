@@ -67,7 +67,7 @@ function App() {
       <Router>
         <Header title='Logo'></Header>
         <Switch>
-          <Route exact path="/" render={() => {
+          <Route path="/" render={() => {
 
             return (
               <div className="container">
