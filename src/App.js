@@ -66,20 +66,23 @@ function App() {
     <>
       <Router>
         <Header title='Logo'></Header>
-        <Route exact path="/" render={() => {
+        <Switch>
+          <Route exact path="/" render={() => {
 
-          return (
-            <div className="container">
-              <AddTodo addTodo={addTodo}></AddTodo>
-              <TodosList todos={todos} onDelete={onDelete}></TodosList>
-            </div>
-          );
+            return (
+              <div className="container">
+                <AddTodo addTodo={addTodo}></AddTodo>
+                <TodosList todos={todos} onDelete={onDelete}></TodosList>
+              </div>
+            );
 
-        }}>
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
+          }}>
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
+
         <Footer title='My Footer'></Footer>
       </Router>
     </>
